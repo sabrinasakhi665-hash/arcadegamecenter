@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arcade Game Center Mini - Upgrade</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="arcade-cabinet">
+        <h1> ARCADE GAME CENTER </h1>
+    
+    <div class="menu-container">
+        <button class="btn-menu active" onclick="switchGame('menu')"> Menu Utama</button>
+        <button class="btn-menu" onclick="switchGame('cookie')">Cookie Catch</button>
+        <button class="btn-menu" onclick="switchGame('flappy')">Flappy Bird</button>
+        <button class="btn-menu" onclick="switchGame('parkour')">Wall Parkour</button>
+    </div>
+
+    <section id="home-stats" class="home-stats" aria-label="Statistik permainan">
+        <h2>Rekor Arcade</h2>
+        <div class="stats-grid">
+            <article class="game-stat" data-stat="cookie">
+                <h3>Cookie Catch</h3>
+                <p>Skor tertinggi <strong id="high-cookie">0</strong></p>
+                <p>Dimainkan <strong id="played-cookie">0</strong> kali</p>
+                <p>Game over <strong id="deaths-cookie">0</strong> kali</p>
+            </article>
+            <article class="game-stat" data-stat="flappy">
+                <h3>Flappy Bird</h3>
+                <p>Skor tertinggi <strong id="high-flappy">0</strong></p>
+                <p>Dimainkan <strong id="played-flappy">0</strong> kali</p>
+                <p>Game over <strong id="deaths-flappy">0</strong> kali</p>
+            </article>
+            <article class="game-stat" data-stat="parkour">
+                <h3>Wall Parkour</h3>
+                <p>Skor tertinggi <strong id="high-parkour">0</strong></p>
+                <p>Dimainkan <strong id="played-parkour">0</strong> kali</p>
+                <p>Game over <strong id="deaths-parkour">0</strong> kali</p>
+            </article>
+        </div>
+    </section>
+
+    <div class="canvas-container">
+        <p id="menu-prompt">SILAKAN PILIH GAME</p>
+        <canvas id="arcadeCanvas" height="500"></canvas>
+    </div>
+
+    <div class="controls-info">
+        <p id="info-text">Pilih salah satu game di atas untuk mulai bermain!</p>
+        <button id="btn-restart" style="display:none;">Main Lagi</button>
+    </div>
+
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
